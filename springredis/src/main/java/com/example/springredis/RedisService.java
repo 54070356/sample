@@ -16,4 +16,8 @@ public class RedisService {
 	public void addUser(User user) {
 		redisTemplate.opsForList().leftPush("user", user);
 	}
+	
+	public User getUser() {
+		return redisTemplate.opsForList().leftPop("user");
+	}
 }
