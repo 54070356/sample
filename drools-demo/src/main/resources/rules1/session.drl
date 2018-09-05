@@ -1,0 +1,42 @@
+package eric.rules
+
+import com.eric.drools_demo.Session
+import com.eric.drools_demo.Msg
+
+rule "age"
+    when
+        Session(getAttributeValue("age") == 10)
+    then
+        System.out.println( "age=10" );
+end
+
+
+rule "gender"
+    when
+        Session(getAttributeValue("gender") == "male")
+    then
+        System.out.println( "gender=male" );
+end
+
+rule "married"
+    when
+        Session(getAttributeValue("married") == false)
+    then
+        System.out.println( "married=true" );
+end
+
+rule "messageName"
+when
+        Msg(name == "msg1")
+    then
+        System.out.println( "message name=msg1" );
+end
+
+
+rule "sum"
+when
+        $n:List()
+        
+    then
+        System.out.println( "message name=msg1" );
+end

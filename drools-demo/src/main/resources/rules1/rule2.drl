@@ -1,0 +1,12 @@
+package eric.rules
+
+import com.eric.drools_demo.Session
+import com.eric.drools_demo.Msg
+
+
+rule "msg2"
+when
+        Msg(name == "msg2")
+    then
+        System.out.println( "message name=msg2" );
+end
