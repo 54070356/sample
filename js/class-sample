@@ -1,0 +1,32 @@
+class Dog {
+    constructor(name) {
+        this.name = name
+    }
+
+    getName() {
+        return this.name
+    }
+
+    print() {
+        console.log(`I am ${this.name}`)
+    }
+}
+
+class ColorfulDog extends Dog{
+    constructor(name, color) {
+        super(name)
+        this.color =color
+    }
+
+    print(){
+        super.print()
+        console.log(`I am red`)
+    }
+}
+
+const dog = new Dog('Tom')
+dog.print()
+
+const redDog = new ColorfulDog('Jack', 'red')
+redDog.print()
+console.log(ColorfulDog.prototype)
